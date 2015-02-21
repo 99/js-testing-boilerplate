@@ -13,6 +13,7 @@ module.exports = function(grunt){
   grunt.initConfig(options);
 
   grunt.registerTask('test', ['jsbeautifier', 'karma:unit']);
+  grunt.registerTask('validate', ['jslint', 'jshint', 'jscs']);
   grunt.registerTask('compile', ['fixmyjs', 'jsbeautifier', 'jslint', 'jshint', 'jscs']);
   grunt.registerTask('default', ['fixmyjs', 'jsbeautifier', 'jslint', 'jshint', 'jscs', 'karma:unit']);
   grunt.registerTask('continuous', ['fixmyjs', 'jsbeautifier', 'jslint', 'jshint', 'jscs', 'karma:continuous', 'sonarRunner']);
